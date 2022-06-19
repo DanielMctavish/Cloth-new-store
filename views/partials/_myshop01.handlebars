@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de coisas</title>
+</head>
+
+<body>
+    <div>
+        <a href="/">
+            <img src="/public/mídias/logo-nav-menu.png" id="logo-menu">
+        </a>
+        <img src="/public/mídias/icons/shopping-cart.png" id="icon-carrinho">
+        <div id="countShop">0</div>
+    </div>
+    <div id="produtos"></div>
+    <div id="carrinho">
+        <div id="content-carrinho"></div>
+        <div id="footer">
+            <input type="button" value="comprar" id="btn-buy">
+            <input type="button" value="cancelar" id="btn-cancel">
+            <div id="total">TOTAL: R$ 0.00</div>
+        </div>
+    </div>
+
+    <div id="slot-pay"></div>
+    <footer id="rodape">
+        Desenhado e programado por |Daniel Arruda| 2022
+    </footer>
+</body>
+<script src="https://js.stripe.com/v3/"></script>
+
+</html>
