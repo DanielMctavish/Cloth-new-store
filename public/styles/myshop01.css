@@ -172,8 +172,17 @@ img {
     display: flex;
 }
 
+#conteiner-logo-menu{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
 #logo-menu {
-    position: absolute;
+    position: relative;
     width: 15vh;
     left: 0;
     z-index: 2;
