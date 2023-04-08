@@ -1,20 +1,19 @@
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-#_menuGeneral{
+#_menuGeneral {
     color: #FDF5E7;
     font-family: sans-serif;
     list-style: none;
-    border: solid 1px #FFA08A;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70%;
 }
 
-#_menuGeneral ul{
+#_menuGeneral ul {
     color: #FDF5E7;
     font-family: sans-serif;
     list-style: none;
@@ -37,7 +36,7 @@ a{
     overflow: hidden;
 }
 
-#logo{
+#logo {
     position: absolute;
     width: 30%;
 }
@@ -151,19 +150,80 @@ a{
     right: 7%;
 }
 
-@media (max-width:500px){
+#icon-menu-general {
+    position: absolute;
+    right: 4vh;
+    top: 10vh;
+    transform: scale(1.5);
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:800px) {
+    #_menuGeneral {
+        position: absolute;
+        width: 100%;
+        height: 20vh;
+        top: 16vh;
+        overflow: hidden;
+    }
+
+    #_menuGeneral ul {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 20vh;
+        top: -25vh;
+        background: #59A9FF;
+        left: 0;
+        right: auto;
+        transition: .3s;
+    }
+    #_menuGeneral ul.active {
+        top: -1.5vh;
+        transition: 1s;
+    }
+
+    #_menuGeneral ul div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 12vh;
+        text-align: center;
+        margin-bottom: 1px;
+        left: -40px;
+        background: #4dffc13d;
+    }
+
+    #_menuGeneral ul div:hover {
+        background: rgba(255, 255, 255, 0.404);
+        font-size: 14pt;
+    }
+
+    #icon-menu-general {
+        display: block;
+    }
+}
+
+@media (max-width:500px) {
     #region-right {
         font-size: 5pt;
         text-align: center;
     }
+
     #region-left {
         font-size: 5pt;
         text-align: center;
     }
+
     #background-central {
         filter: blur(4px);
     }
 }
 
 /* -----------------  CONFIGURAÇÕES PARA OS MENUS ---------------------- */
-
