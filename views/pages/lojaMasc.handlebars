@@ -1,9 +1,16 @@
 <link rel="stylesheet" href="/public/styles/lojaMasc.css">
-<link rel="stylesheet" href="/public/styles/myshop02.css">
+<link rel="stylesheet" href="/public/styles/myshop01.css">
 
 <div id="geral">
     <div id="nav-bar">
-        teste
+        <div id="conteiner-logo-menu">
+            <a href="/">
+                <img src="/public/mídias/logo-nav-menu.png" id="logo-menu">
+            </a>
+        </div>
+        {{>_menuGeneral}}
+        <img src="/public/mídias/icons/shopping-cart.png" id="icon-carrinho">
+        <div id="countShop">0</div>
     </div>
     {{>_myshop01}}
 </div>

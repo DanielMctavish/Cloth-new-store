@@ -145,10 +145,10 @@ img {
 
 #icon-carrinho {
     position: absolute;
-    right: 3vh;
-    top: 3vh;
+    right: 2vh;
+    top: 1.2vh;
     cursor: pointer;
-    width: 7vh;
+    width: 5vh;
     z-index: 2;
 }
 

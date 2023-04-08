@@ -2,6 +2,28 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+#_menuGeneral{
+    color: white;
+    font-family: sans-serif;
+    list-style: none;
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+#_menuGeneral ul{
+    color: white;
+    font-family: sans-serif;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
 #home {
     display: flex;
     justify-content: center;
@@ -19,6 +41,7 @@ a{
     position: absolute;
     width: 30%;
 }
+
 
 
 #left-content {

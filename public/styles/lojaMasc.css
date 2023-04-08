@@ -10,11 +10,14 @@
 }
 #nav-bar{
     background: rgb(70, 70, 70);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: fixed;
     width: 100%;
-    height: 15vh;
+    z-index: 1;
+    height: 16vh;
     left: 0;
     top: 0;
     box-shadow: 2px 2px 9px rgba(43, 43, 43, 0.74);
-    z-index: 1;
 }
