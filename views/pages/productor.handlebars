@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles/productor_styles.css">
+    <title>Página do Produtor</title>
+</head>
+
+<body>
+    <div id="display-productor">
+        {{!-- Cadastro do Produtor --}}
+        <div id="productor-section-01">
+            <h3>Deseja Vender Roupas?</h3>
+            <button id="button-register-productor">Cadastro do Produtor</button>
+            <div id="productor-content">
+
+            </div>
+        </div>
+        <div id="productor-section-02"></div>
+        {{!-- LOGIN DO PRODUTOR --}}
+        <form id="form-login-profuctor" method="POST" action="/productor/login">
+            <input type="text" id="login-name" name="login-name" placeholder="nome/email">
+            <input type="password" id="login-password" name="login-password" placeholder="senha">
+            <button id="send-login-button">enviar</button>
+        </form>
+
+        {{!-- Tela de Cadastro de Produtor --}}
+        <div id="productor-register-display">
+
+            <header id="register-section-01">
+                <div id="shop-avatar">
+                    <input type="file" id="shop-image-avatar" name="imagem">
+                </div>
+                <div id="content-shop">
+                    <p> conteúdo sobre loja</p>
+                </div>
+            </header>
+
+            <div id="register-section-02">
+                <input type="text" id="shop-name" placeholder="nome da loja" required>
+                <input type="text" id="shop-description" placeholder="descrição da loja" required>
+            </div>
+
+            <div id="register-section-03">
+                <input type="text" id="productor-name" placeholder="seu nome" required>
+                <input type="email" id="productor-email" placeholder="seu email" required>
+                <input type="password" id="productor-password" placeholder="senha" required>
+                <input type="password" id="productor-password-confirm" placeholder="confirme sua senha" required>
+            </div>
+            <button id="button-productor-send">CRIAR</button>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/public/scripts/productor.js"></script>
+
+</html>

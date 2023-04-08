@@ -26,8 +26,10 @@ app.use(bodyParser.json())
 
 //ROTAS-------------------------------------------------------------
 const routerHome = require("./routers/routerHome")
+const productor_route = require("./routers/productor_route")
 
 app.use("/", routerHome);
+app.use("/productor", productor_route)
 
 const PORT = process.env.PORT || 1020;
 app.listen(PORT, () => {
