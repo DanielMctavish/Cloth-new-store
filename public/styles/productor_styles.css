@@ -15,13 +15,47 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     left: 0;
     width: 65%;
     height: 100vh;
     background: #59A9FF;
+    color: white;
+    font-family: sans-serif;
     z-index: 1;
+
+    overflow: hidden;
+}
+
+#productor-section-01 img {
+    position: absolute;
+    width: 120%;
+    opacity: .35;
+    z-index: -1;
+}
+
+#productor-content {
+    position: relative;
+    width: 70%;
+    height: auto;
+    left: -2vh;
+    text-align: center;
+    overflow-y: auto;
+}
+
+#button-register-productor {
+    background: none;
+    font-size: 15pt;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#button-register-productor:hover {
+    letter-spacing: 4px;
+    transition: 1s;
 }
 
 #productor-section-02 {
@@ -34,6 +68,18 @@
     transform-origin: left;
     z-index: 2;
     box-shadow: -10px 0px 10px -5px rgba(19, 19, 19, 0.432);
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#border-section-02 {
+    position: relative;
+    width: 98%;
+    height: 97vh;
+    border: 4px solid white;
 }
 
 #form-login-profuctor {
@@ -46,9 +92,26 @@
     z-index: 1;
     width: 20vh;
     height: 15vh;
-    background: #FFA08A;
     z-index: 2;
     right: 20%;
+}
+
+#form-login-profuctor input {
+    text-align: center;
+    background: none;
+    border: 2px solid white;
+    width: 25vh;
+    height: 3vh;
+}
+
+#form-login-profuctor button {
+    background: rgba(255, 255, 255, 0.445);
+    border: 2px solid white;
+    width: 15vh;
+    height: 3vh;
+    color: rgb(61, 61, 61);
+    cursor: pointer;
+    letter-spacing: 4px;
 }
 
 #productor-register-display {
@@ -143,7 +206,8 @@
     justify-content: center;
     align-items: center;
 }
-#shop-avatar img{
+
+#shop-avatar img {
     width: 150%;
 }
 
@@ -157,6 +221,16 @@
     border: none;
     cursor: pointer;
     border-radius: 10px;
+}
+
+#button-productor-back{
+    position: relative;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    font-size: 10pt;
+    background: none;
 }
 
 #cover-img-register {
@@ -195,6 +269,20 @@
 }
 
 @media (max-width:750px) {
+    #border-section-02 {
+        display: none;
+    }
+    #productor-section-01 img {
+        height: 100vh;
+        width: 120%;
+    }
+
+    #productor-content {
+        height: 70vh;
+        left: auto;
+        width: 90%;
+    }
+
     #cover-img-register img {
         height: auto;
         width: auto;

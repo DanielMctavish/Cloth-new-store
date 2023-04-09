@@ -4,6 +4,7 @@ const router = express.Router()
 const multer = require("multer")
 
 const uploadImage = require('../services/firebase')
+const validationProductor = require('../validations/validations_productor')
 
 const Multer = multer({
     storage: multer.memoryStorage(),
@@ -14,16 +15,18 @@ router.get("/", (req, res) => {
     res.render('../views/pages/productor.handlebars')
 })
 
-router.post("/register-productor", Multer.single("image_avatar"), uploadImage, (req, res) => {
+router.post("/register-productor", Multer.single("image_avatar"),validationProductor, uploadImage, (req, res) => {
     const request = req.file;
     const name = req.body.shop_name
-    const firebaseUrl = req.file.firebaseUrl;
 
-    console.log('resposta do servidor', firebaseUrl);
-    res.redirect("/productor")
+    if (req.file !== undefined) {
+        const firebaseUrl = req.file.firebaseUrl;
+    }
+
+    res.send("devolvendo resposta!")
 })
 
-router.post("/login",(req,res)=>{
+router.post("/login", (req, res) => {
     console.log('request de login', req.body)
     res.send(req.body)
 })

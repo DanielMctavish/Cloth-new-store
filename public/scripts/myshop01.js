@@ -732,7 +732,7 @@ descricaoInit = () => {
                     <h1>${items[key].descricao}</h1>
                         <div id = "descri-text-01">${items[key].descri}</div>
                     <input type = "button" value = "voltar" class = "btn-back-descri">
-                    <input type = "button" value = "adicionar ao carrinho" id = "btn-add" key = ${items[key].ID} style = "width: 18vh">
+                    <input type = "button" value = "adicionar ao carrinho" id = "btn-add" key = ${items[key].ID}>
                 </div>
             <div>
             `

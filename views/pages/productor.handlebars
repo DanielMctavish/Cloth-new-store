@@ -15,18 +15,42 @@
     <div id="display-productor">
         {{!-- Cadastro do Produtor --}}
         <div id="productor-section-01">
+            <img src="/public/mídias/cover_productor_01.png" alt="" id="cover_productor_01">
             <h3>Deseja Vender Roupas?</h3>
             <button id="button-register-productor">Cadastro do Produtor</button>
             <div id="productor-content">
+                <p>
+                    Se você é um(a) produtor(a) de roupas e deseja vender seus produtos em nossa plataforma, o processo
+                    é simples e fácil! Tudo o que você precisa fazer é criar uma conta gratuita em nossa plataforma e
+                    começar a criar seus posts de venda.
 
+                    Para criar uma conta, basta clicar no botão acima "Cadastro do Produtor" e preencher as
+                    informações solicitadas, como nome, e-mail e senha. Depois de criar sua conta, você poderá acessar
+                    seu painel de controle e começar a criar seus posts de venda.
+
+                    Para criar um post de venda, basta clicar no botão "Criar Post" e preencher as informações sobre o
+                    produto que você deseja vender, incluindo fotos, descrição, tamanho e preço. Certifique-se de
+                    incluir todas as informações relevantes para que seus clientes possam fazer uma compra informada.
+
+                    Uma vez que seu post esteja criado, ele será exibido em nossa plataforma para todos os usuários
+                    visualizarem e comprarem. Você pode criar quantos posts de venda desejar e atualizá-los sempre que
+                    necessário.
+
+                    Lembre-se de que estamos aqui para ajudá-lo(a) a maximizar suas vendas e alcançar seus objetivos de
+                    negócios. Se você tiver alguma dúvida ou precisar de assistência, nossa equipe de suporte estará
+                    sempre disponível para ajudá-lo(a). Então, não espere mais e comece a vender suas roupas em nossa
+                    plataforma hoje mesmo!
+                </p>
             </div>
         </div>
-        <div id="productor-section-02"></div>
+        <div id="productor-section-02">
+            <div id="border-section-02"></div>
+        </div>
         {{!-- LOGIN DO PRODUTOR --}}
         <form id="form-login-profuctor" method="POST" action="/productor/login">
             <input type="text" id="login-name" name="login-name" placeholder="nome/email">
             <input type="password" id="login-password" name="login-password" placeholder="senha">
-            <button id="send-login-button">enviar</button>
+            <button id="send-login-button">entrar</button>
         </form>
 
         {{!-- Tela de Cadastro de Produtor --}}
@@ -55,13 +79,13 @@
                     <span class="material-symbols-outlined">
                         store
                     </span>
-                    <input type="text" id="shop-name" placeholder="nome da loja" required>
+                    <input type="text" id="shop-name" name="shop_name" placeholder="nome da loja" required>
                 </div>
                 <div>
                     <span class="material-symbols-outlined">
                         description
                     </span>
-                    <input type="text" id="shop-description" placeholder="descrição da loja" required>
+                    <input type="text" id="shop-description" name="shop_description" placeholder="descrição da loja" required>
                 </div>
             </div>
 
@@ -69,12 +93,14 @@
                 <span class="material-symbols-outlined">
                     check_circle
                 </span>
-                <input type="text" id="productor-name" placeholder="seu nome" required>
-                <input type="email" id="productor-email" placeholder="seu email" required>
-                <input type="password" id="productor-password" placeholder="senha" required>
-                <input type="password" id="productor-password-confirm" placeholder="confirme sua senha" required>
+                <input type="text" id="productor-name" name="productor_name" placeholder="seu nome" required>
+                <input type="email" id="productor-email" name="productor_email" placeholder="seu email" required>
+                <input type="password" id="productor-password" name="productor_password" placeholder="senha" required>
+                <input type="password" id="productor-password-confirm" name="productor_confirm_password" placeholder="confirme sua senha" required>
             </div>
+            <span id="productor-message-status">mensagem de status</span>
             <button id="button-productor-send">CRIAR</button>
+            <button id="button-productor-back">VOLTAR</button>
         </div>
     </div>
 </body>
