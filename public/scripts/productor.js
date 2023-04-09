@@ -55,3 +55,23 @@ submit_productor_register.addEventListener('click', async () => {
     })
 
 })
+
+//---------------------------miniatura do avatar da loja---------------------------------
+
+const input = document.querySelector('#shop-image-avatar');
+
+
+input.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = (event) => {
+    const img = document.createElement('img');
+    img.src = event.target.result;
+
+    const preview = document.querySelector('#shop-avatar');
+    preview.appendChild(img);
+  };
+
+  reader.readAsDataURL(file);
+});
