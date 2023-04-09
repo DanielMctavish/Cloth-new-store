@@ -26,7 +26,7 @@ img {
     align-items: center;
     left: 0;
     background: #FFA08A;
-    background: linear-gradient(0deg, #4DFFC1 0%, #FFA08A 73%);
+    background: rgb(39, 39, 39);
     color: #D166FF;
     width: 100%;
     height: 80vh;
@@ -132,7 +132,7 @@ img {
 
 #produtos {
     position: absolute;
-    top: 17vh;
+    top: 16vh;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: auto;
