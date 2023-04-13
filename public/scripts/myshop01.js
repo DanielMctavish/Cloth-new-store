@@ -548,7 +548,7 @@ const items = [
             }
         ]
     },
-    
+
 ]
 
 const totaldb = {
@@ -561,17 +561,21 @@ const btnCarrinho = document.getElementById("icon-carrinho")
 const produtos = document.getElementById("produtos")
 const carrinho = document.getElementById("carrinho")
 const contentCarrinho = document.getElementById("content-carrinho");
+const banner01 = document.getElementById("promotional-banner-01")
+const geral = document.getElementById("geral")
 
 
 inicializar = () => {
     produtos.innerHTML = "";
+    banner01.style.display = 'flex'
+    geral.style.background = '#F8E8FF'
     items.map(el => {
         produtos.innerHTML += `
         <div id = "card-produtos">
+            <img src="./public/medias/galeria/fem/${el.img}" class = "card-photos" key = ${el.ID} style = "cursor:pointer">
             <h3> ${el.descricao}</h3>
             <div>disponíveis: ${el.disponivel}</div>
             <div id = "price">R$${el.valor}</div>
-            <img src="./public/mídias/galeria/fem/${el.img}" class = "card-photos" key = ${el.ID} style = "cursor:pointer">
         </div>
         `
     })
@@ -716,10 +720,14 @@ btnCarrinho.addEventListener("click", () => {
 
 //DESCRIÇÂO DETALHADA------------------------------------------------------
 descricaoInit = () => {
-    let cardPhotos = document.querySelectorAll(".card-photos");
-    
+    const cardPhotos = document.querySelectorAll(".card-photos");
+
+
     cardPhotos.forEach(el => {
         el.addEventListener("click", () => {
+            banner01.style.display = 'none';
+            geral.style.background = '#F4DAFF'
+            geral.style.height = '300vh'
             let key = el.getAttribute("key");
             //console.log(items[key]);
             produtos.innerHTML = "";
@@ -727,47 +735,57 @@ descricaoInit = () => {
             let descriProdutos = document.getElementById("descri-produtos")
             descriProdutos.innerHTML += `
             <div id = "products-block01">
-                <img src="./public/mídias/galeria/fem/${items[key].img}" id = "products-img">
+
+                <div id = "products-img">
+                    <img src="./public/medias/galeria/fem/${items[key].img}" >
+                </div>
+                
                 <div>
-                    <h1>${items[key].descricao}</h1>
-                        <div id = "descri-text-01">${items[key].descri}</div>
+                    <span>${items[key].descricao}</span>
+                    <span>R$ ${items[key].valor}</span>
+                    <hr style = "width:70%">
+                    <div>
+                        <span>Tamanho:</span>
+                        <ul>
+                            <div>P</div>
+                            <div>M</div>
+                            <div>G</div>
+                        </ul>
+                    </div>
+
+                    <span> 
+                        <img src="./public/medias/icons/straighten.png" >
+                        acesse aqui informações sobre medidas
+                    </span>
+                    
+                    <div id = "descri-text-01">${items[key].descri}</div>
                     <input type = "button" value = "voltar" class = "btn-back-descri">
                     <input type = "button" value = "adicionar ao carrinho" id = "btn-add" key = ${items[key].ID}>
+                    <div id='box-frete'>
+                        <div>Produto disponível: Brasil</div>
+                        <div>
+                            Entrega grátis para produtos acima de
+                            R$100,00 faça uma consulta de disponibilidade
+                            para o seu endereço.
+                        </div>
+                    </div>
+                </div>
+
+                <div id = 'banner02'>
+                    <span>conheça também...</span>
+                    <div class = 'banner_area'>
+                        <div style = 'left: -4vh'>A elegância masculina</div>
+                        <img src="./public/medias/banner/elegant_man.png" >
+                        <div style = 'right: -6vh'>O Presente perfeito para o seu Homem</div>
+                    </div>
+                </div>
+
+                <div id = 'recommends-items'>
+                    testando
                 </div>
             <div>
             `
-            descriProdutos.innerHTML += `<div id="products-block02"></div>`;
-            let productsBlock02 = document.getElementById("products-block02")
-            if (items[key].medidasCamisa) { //BLOCO DE CAMISAS
-                productsBlock02.innerHTML += `
-                <div id = "descri-dome">
-                    <h3>camisas:</h3>
-                    <select id = "select-tam">
-                        <option>escolha seu tamanho</option>
-                        <option>tamano P</option>
-                        <option>tamanho M</option>
-                        <option>tamanho G</option>
-                    </select>
-                    <div id = "descri-itens-block"> 
-                        <div>
-                            tamanho: ${items[key].medidasCamisa[0].tam} <br>
-                            ombro: ${items[key].medidasCamisa[0].ombro} cm <br>
-                            torax: ${items[key].medidasCamisa[0].torax} cm <br>
-                        </div>
-                        <div>
-                            tamanho: ${items[key].medidasCamisa[1].tam} <br>
-                            ombro: ${items[key].medidasCamisa[1].ombro} cm <br>
-                            torax: ${items[key].medidasCamisa[1].torax} cm <br>
-                        </div>
-                        <div>
-                            tamanho: ${items[key].medidasCamisa[2].tam} <br>
-                            ombro: ${items[key].medidasCamisa[2].ombro} cm <br>
-                            torax: ${items[key].medidasCamisa[2].torax} cm<br>
-                        </div> 
-                    </div>
-                </div>
-            `
-            }
+           
 
             if (items[key].medidasCalca) {//BLOCOS DE CALÇA
                 let imgdisplaydescribes = document.getElementById("products-img");
@@ -870,7 +888,7 @@ descricaoInit = () => {
             }
 
 
-            
+
             addCarrinho();
             let btnBack = document.querySelector(".btn-back-descri");
             btnBack.addEventListener("click", () => {

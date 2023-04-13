@@ -5,11 +5,12 @@
 <style>
     .material-symbols-outlined {
         position: absolute;
-        color: white;
+        color: rgba(44, 44, 44, 0.589);
         transform: scale(1.5);
-        left: 4vh;
+        left: 8vh;
         cursor: pointer;
         display: none;
+        margin-top: 12px;
     }
 
     @media(max-width:700px) {
@@ -21,19 +22,40 @@
 
 <div id="geral">
     <div id="nav-bar">
+        <a href="/" id="icon-back-nav"><img src="/public/medias/icons/arrow_back.png" id="icon-back-nav"></a>
+ 
         <div id="conteiner-logo-menu">
             <a href="/">
-                <img src="/public/mídias/logo-nav-menu.png" id="logo-menu">
+                <img src="/public/medias/logo-nav-menu.png" id="logo-menu">
             </a>
         </div>
         <span class="material-symbols-outlined">
             grid_on
         </span>
-        {{>_menuGeneral}}
-        <img src="/public/mídias/icons/shopping-cart.png" id="icon-carrinho">
-        <div id="countShop">0</div>
+        {{!-- {{>_menuGeneral}} --}}
+
+        <div id="icons-bar">
+            <img src="/public/medias/icons/favorite.png">
+            <img src="/public/medias/icons/person.png">
+            <img src="/public/medias/icons/shopping-cart.png" id="icon-carrinho">
+            <div id="countShop">0</div>
+        </div>
+    </div>
+    <div id="under-navigation">
+        {{>_search_bar}}
+    </div>
+    <div id="promotional-banner-01">
+
+        <img src="/public/medias/banner/samanta-sokolova-y3yWsfN3lA4-unsplash.png" alt="" id="samanta-01">
+        <span>Época das flores! Aproveite seu momento</span>
+        <img src="/public/medias/banner/samanta-sokolova-27acvl2hTWc-unsplash.png" alt="" id="samanta-02">
     </div>
     {{>_myshop01}}
+    <footer id="footer-standard">
+        <div class="footer-area"></div>
+        <div class="footer-area"></div>
+        <div class="footer-area"></div>
+    </footer>
 </div>
 
 <script src="/public/scripts/myshop01.js"></script>

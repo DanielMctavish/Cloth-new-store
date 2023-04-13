@@ -417,7 +417,7 @@ inicializar = () => {
             <h3> ${el.descricao}</h3>
             <div>disponíveis: ${el.disponivel}</div>
             <div id = "price">R$${el.valor}</div>
-            <img src="./public/mídias/galeria/masc/${el.img}" class = "card-photos" key = ${el.ID} style = "cursor:pointer">
+            <img src="./public/medias/galeria/masc/${el.img}" class = "card-photos" key = ${el.ID} style = "cursor:pointer">
         </div>
         `
     })
